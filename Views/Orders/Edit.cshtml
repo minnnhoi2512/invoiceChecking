@@ -1,0 +1,104 @@
+﻿@model ManagerInvoice.Models.Order
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="H_ORDER_NO" />
+            <div class="form-group">
+                <label asp-for="H_ORDER_INT" class="control-label"></label>
+                <input asp-for="H_ORDER_INT" class="form-control" />
+                <span asp-validation-for="H_ORDER_INT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_SUPP_NO" class="control-label"></label>
+                <input asp-for="H_SUPP_NO" class="form-control" />
+                <span asp-validation-for="H_SUPP_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_SUPP_COM" class="control-label"></label>
+                <input asp-for="H_SUPP_COM" class="form-control" />
+                <span asp-validation-for="H_SUPP_COM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_SUP_NAME" class="control-label"></label>
+                <input asp-for="H_SUP_NAME" class="form-control" />
+                <span asp-validation-for="H_SUP_NAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_STORE_NO" class="control-label"></label>
+                <input asp-for="H_STORE_NO" class="form-control" />
+                <span asp-validation-for="H_STORE_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_INVOICE_NO" class="control-label"></label>
+                <input asp-for="H_INVOICE_NO" class="form-control" />
+                <span asp-validation-for="H_INVOICE_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_INVOICE_DATE" class="control-label"></label>
+                <input asp-for="H_INVOICE_DATE" class="form-control" />
+                <span asp-validation-for="H_INVOICE_DATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_TAX_NO" class="control-label"></label>
+                <input asp-for="H_TAX_NO" class="form-control" />
+                <span asp-validation-for="H_TAX_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_INV_AMT" class="control-label"></label>
+                <input asp-for="H_INV_AMT" class="form-control" />
+                <span asp-validation-for="H_INV_AMT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_SECTOR_ID" class="control-label"></label>
+                <input asp-for="H_SECTOR_ID" class="form-control" />
+                <span asp-validation-for="H_SECTOR_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_UPDATEBY" class="control-label"></label>
+                <input asp-for="H_UPDATEBY" class="form-control" />
+                <span asp-validation-for="H_UPDATEBY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_CREATED_DATE" class="control-label"></label>
+                <input asp-for="H_CREATED_DATE" class="form-control" />
+                <span asp-validation-for="H_CREATED_DATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_UPDATED_DATE" class="control-label"></label>
+                <input asp-for="H_UPDATED_DATE" class="form-control" />
+                <span asp-validation-for="H_UPDATED_DATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_STATUS" class="control-label"></label>
+                <input asp-for="H_STATUS" class="form-control" />
+                <span asp-validation-for="H_STATUS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_COMMENT" class="control-label"></label>
+                <input asp-for="H_COMMENT" class="form-control" />
+                <span asp-validation-for="H_COMMENT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

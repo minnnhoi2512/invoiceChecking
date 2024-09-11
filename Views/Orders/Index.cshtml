@@ -1,0 +1,119 @@
+﻿@model IEnumerable<ManagerInvoice.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.H_ORDER_INT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_SUPP_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_SUPP_COM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_SUP_NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_STORE_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_INVOICE_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_INVOICE_DATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_TAX_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_INV_AMT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_SECTOR_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_UPDATEBY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_CREATED_DATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_UPDATED_DATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_STATUS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_COMMENT)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_ORDER_INT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_SUPP_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_SUPP_COM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_SUP_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_STORE_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_INVOICE_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_INVOICE_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_TAX_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_INV_AMT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_SECTOR_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_UPDATEBY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_CREATED_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_UPDATED_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_STATUS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_COMMENT)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.H_ORDER_NO">Edit</a> |
+                    <a asp-controller="OrderDetails" asp-action="ListOrder" asp-route-id="@item.H_ORDER_INT">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.H_ORDER_NO">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

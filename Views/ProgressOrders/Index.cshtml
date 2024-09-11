@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ManagerInvoice.Models.ProgressOrder>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.H_ORDER_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_ORDER_INT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HISTORY_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HISTORY_STATUS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HISTORY_COMMIT_BY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HISTORY_CREATED_DATE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_ORDER_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_ORDER_INT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HISTORY_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HISTORY_STATUS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HISTORY_COMMIT_BY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HISTORY_CREATED_DATE)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PO_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PO_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PO_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

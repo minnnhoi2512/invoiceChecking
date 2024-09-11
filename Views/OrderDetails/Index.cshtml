@@ -1,0 +1,131 @@
+﻿@model IEnumerable<ManagerInvoice.Models.OrderDetail>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.D_ORDER_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_ORDER_INT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_LINE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_ART_NO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_ART_DVT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_MMUNT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_ARTNAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_QTY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_GOLDVAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_GOLD_PRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_SUPVAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_SUP_PRICE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_UPDATEBY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_CREATED_DATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_UPDATED_DATE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_STATUS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.D_COMMENT)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_ORDER_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_ORDER_INT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_LINE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_ART_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_ART_DVT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_MMUNT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_ARTNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_QTY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_GOLDVAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_GOLD_PRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_SUPVAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_SUP_PRICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_UPDATEBY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_CREATED_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.H_UPDATED_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_STATUS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.D_COMMENT)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DETAIL_ORDER_NO">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DETAIL_ORDER_NO">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DETAIL_ORDER_NO">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,48 @@
+﻿@model ManagerInvoice.Models.Image
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Image</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="H_ORDER_NO" class="control-label"></label>
+                <input asp-for="H_ORDER_NO" class="form-control" />
+                <span asp-validation-for="H_ORDER_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_ORDER_INT" class="control-label"></label>
+                <input asp-for="H_ORDER_INT" class="form-control" />
+                <span asp-validation-for="H_ORDER_INT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="A_FILE" class="control-label"></label>
+                <input asp-for="A_FILE" class="form-control" />
+                <span asp-validation-for="A_FILE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="A_CREATED_DATE" class="control-label"></label>
+                <input asp-for="A_CREATED_DATE" class="form-control" />
+                <span asp-validation-for="A_CREATED_DATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

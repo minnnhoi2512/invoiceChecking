@@ -1,0 +1,110 @@
+﻿@model ManagerInvoice.Models.OrderDetail
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>OrderDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DETAIL_ORDER_NO" />
+            <div class="form-group">
+                <label asp-for="D_ORDER_NO" class="control-label"></label>
+                <input asp-for="D_ORDER_NO" class="form-control" />
+                <span asp-validation-for="D_ORDER_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_ORDER_INT" class="control-label"></label>
+                <input asp-for="D_ORDER_INT" class="form-control" />
+                <span asp-validation-for="D_ORDER_INT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_LINE" class="control-label"></label>
+                <input asp-for="D_LINE" class="form-control" />
+                <span asp-validation-for="D_LINE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_ART_NO" class="control-label"></label>
+                <input asp-for="D_ART_NO" class="form-control" />
+                <span asp-validation-for="D_ART_NO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_ART_DVT" class="control-label"></label>
+                <input asp-for="D_ART_DVT" class="form-control" />
+                <span asp-validation-for="D_ART_DVT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_MMUNT" class="control-label"></label>
+                <input asp-for="D_MMUNT" class="form-control" />
+                <span asp-validation-for="D_MMUNT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_ARTNAME" class="control-label"></label>
+                <input asp-for="D_ARTNAME" class="form-control" />
+                <span asp-validation-for="D_ARTNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_QTY" class="control-label"></label>
+                <input asp-for="D_QTY" class="form-control" />
+                <span asp-validation-for="D_QTY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_GOLDVAT" class="control-label"></label>
+                <input asp-for="D_GOLDVAT" class="form-control" />
+                <span asp-validation-for="D_GOLDVAT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_GOLD_PRICE" class="control-label"></label>
+                <input asp-for="D_GOLD_PRICE" class="form-control" />
+                <span asp-validation-for="D_GOLD_PRICE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_SUPVAT" class="control-label"></label>
+                <input asp-for="D_SUPVAT" class="form-control" />
+                <span asp-validation-for="D_SUPVAT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_SUP_PRICE" class="control-label"></label>
+                <input asp-for="D_SUP_PRICE" class="form-control" />
+                <span asp-validation-for="D_SUP_PRICE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_UPDATEBY" class="control-label"></label>
+                <input asp-for="D_UPDATEBY" class="form-control" />
+                <span asp-validation-for="D_UPDATEBY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_CREATED_DATE" class="control-label"></label>
+                <input asp-for="H_CREATED_DATE" class="form-control" />
+                <span asp-validation-for="H_CREATED_DATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="H_UPDATED_DATE" class="control-label"></label>
+                <input asp-for="H_UPDATED_DATE" class="form-control" />
+                <span asp-validation-for="H_UPDATED_DATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_STATUS" class="control-label"></label>
+                <input asp-for="D_STATUS" class="form-control" />
+                <span asp-validation-for="D_STATUS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_COMMENT" class="control-label"></label>
+                <input asp-for="D_COMMENT" class="form-control" />
+                <span asp-validation-for="D_COMMENT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
